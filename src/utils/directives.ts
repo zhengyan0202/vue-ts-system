@@ -77,3 +77,22 @@ Vue.directive('dialogDrag', {
     }
   }
 })
+
+Vue.directive('loadmore', {
+  bind(el:any, binding) {
+    let tbody: Element | any  = el.querySelector('.el-table__body-wrapper');
+    el.tableInfiniteScrollFn = function() {
+      const scrollDistance = this.scrollHeight - this.scrollTop - this.clientHeight
+      if (scrollDistance <= 1) {
+        binding.value();
+      }
+    }
+    tbody.addEventListener('scroll', el.tableInfiniteScrollFn);
+    tbody = undefined;
+  },
+  unbind(el:any) {
+    let tbody: Element | any = el.querySelector(".el-table__body-wrapper");
+    tbody.removeEventListener("scorll", el.tableInfiniteScrollFn);
+    el.tableInfiniteScrollFn = undefined;
+  }
+})

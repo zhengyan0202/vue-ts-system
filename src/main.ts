@@ -3,6 +3,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+// 使用mock模拟数据
+import './mock';
+
 import './utils/permission' // permission control
 import './utils/directives';
 
