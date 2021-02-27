@@ -32,6 +32,16 @@ export default [
           keepAlive: true,
           title: '基础表格'
         }
+      },
+      {
+        path: '/g6',
+        name: 'g6',
+        component: () => import('@/views/g6.vue'),
+        meta: {
+          icon: '',
+          keepAlive: true,
+          title: 'g6'
+        }
       }
     ]
 

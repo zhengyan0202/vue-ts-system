@@ -9,9 +9,7 @@ import './mock';
 import './utils/permission' // permission control
 import './utils/directives';
 
-import Element from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css'
-Vue.use(Element)
+import './element.ts';
 
 Vue.config.productionTip = false;
 

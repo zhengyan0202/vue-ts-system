@@ -73,8 +73,8 @@ export default class Sidebar extends Vue {
     },
     {
       icon: "el-icon-guide",
-      index: "tabs",
-      title: "tab选项卡",
+      index: "g6",
+      title: "G6",
     },
     {
       icon: "el-icon-set-up",
